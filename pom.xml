@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ef7fc98e-5f3d-48a5-9cc6-8ac448235f7f</groupId>
+    <artifactId>customkafkaconnector</artifactId>
+    <version>1.0.0</version>
+    <packaging>mule-extension</packaging>
+    <name>CustomKakfa Extension</name>
+
+    <parent>
+        <groupId>org.mule.extensions</groupId>
+        <artifactId>mule-modules-parent</artifactId>
+        <version>1.1.10</version>
+    </parent>
+
+    <build>
+        <plugins>
+          <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <executions>
+              <execution>
+                  <id>attach-sources</id>
+                  <goals>
+                      <goal>jar</goal>
+                  </goals>
+              </execution>
+          </executions>
+         </plugin>
+       </plugins>
+    </build>  
+    <dependencies>
+        <dependency>
+          <groupId>org.apache.kafka</groupId>
+          <artifactId>kafka-clients</artifactId>
+          <version>3.0.0</version>
+      </dependency>      
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.26</version>
+        </dependency>
+      
+</dependencies>
+<distributionManagement>
+    <snapshotRepository>
+      <id>PMuleRepository</id>
+      <name>Exchange Repository</name>
+      <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/ef7fc98e-5f3d-48a5-9cc6-8ac448235f7f/maven</url>
+      <layout>default</layout>
+    </snapshotRepository>
+    <repository>
+      <id>PMuleRepository</id>
+      <name>Exchange Repository</name>
+      <url>https://maven.anypoint.mulesoft.com/api/v1/organizations/ef7fc98e-5f3d-48a5-9cc6-8ac448235f7f/maven</url>
+      <layout>default</layout>
+    </repository>
+  </distributionManagement>
+
+</project>

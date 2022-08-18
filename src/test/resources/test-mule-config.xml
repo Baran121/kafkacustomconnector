@@ -1,0 +1,19 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:customkakfa="http://www.mulesoft.org/schema/mule/customkakfa"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/customkakfa http://www.mulesoft.org/schema/mule/customkakfa/current/mule-customkakfa.xsd">
+
+    <customkakfa:config name="config" configId="configId">
+        <customkakfa:connection requiredParameter="aValue" />
+    </customkakfa:config>
+
+    <flow name="sayHiFlow">
+        <customkakfa:say-hi person="Mariano Gonzalez"/>
+    </flow>
+
+    <flow name="retrieveInfoFlow">
+        <customkakfa:retrieve-info config-ref="config"/>
+    </flow>
+
+</mule>
